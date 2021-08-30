@@ -1,0 +1,171 @@
+/* START GLOBAL */
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans";
+}
+
+body {
+  background-image: url("../images/bg-desktop.svg");
+  background-color: var(--violet);
+  color: #FFF;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 0 15px;
+}
+/* END GLOBAL */
+
+
+
+/* START NAV */
+nav {
+  padding: 40px 0;
+}
+/* END NAV */
+
+
+
+/* START SECTIONS */
+section .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+section .col-1 {
+  flex: 0 0 59%;
+  max-width: 59%;
+}
+
+section .col-2 {
+  flex: 0 0 39%;
+  max-width: 39%;
+  margin-top: 40px;
+}
+
+section .col-1 img {
+  width: 100%;
+}
+
+section .col-2 h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 39px;
+  margin-bottom: 30px;
+}
+
+section .col-2 p {
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 30px;
+  line-height: 1.6em;
+}
+
+section .col-2 a {
+  color: var(--violet);
+  background-color: #FFF;
+  text-decoration: none;
+  padding: 15px 60px;
+  display: inline-block;
+  border-radius: 40px;
+  font-size: 16px;
+  box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, .2);
+  transition: .3s;
+}
+
+
+section .col-2 a:hover {
+  color: #FFF;
+  background-color: var(--soft-magenta);
+}
+/* END SECTIONS */
+
+/* START ICONS */
+.icons {
+  margin-bottom: 40px;
+}
+.icons .container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icons .container a {
+  color: #FFF;
+  transition: .3s;
+}
+
+.icons .container a:hover {
+  color: var(--violet);
+}
+
+.icons .container i {
+  font-size: 20px;
+  border: 1px solid #FFF;
+  margin: 0 10px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  transition: .3s;
+}
+
+.icons .container a:hover i {
+  background-color: #FFF;
+}
+/* END ICONS */
+
+
+/* START MEDIA */
+@media (max-width: 375px) {
+  body {
+    background-image: url("../images/bg-mobile.svg");
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  nav img {
+    width: 40%;
+  }
+
+  section {
+    text-align: center;
+  }
+
+  section .col-1,
+  section .col-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  section .col-2 h2 {
+    font-size: 25px;
+  }
+
+  section .col-2 p {
+    font-size: 16px;
+  }
+
+  section .col-2 a {
+    padding: 15px 90px;
+  }
+
+  .icons .container {
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+/* END MEDIA */
